@@ -10,7 +10,7 @@ namespace Contact.Service.Core.Services
     public interface IContactService
     {
         Task<int> AddAsync(ContactEntity contact);
-        Task UpdateAsync(int contactId, ContactEntity contact);
+        Task UpdateAsync(int contactId, ContactEntity updateContact);
         Task DeleteAsync(int contactId);
     }
 }

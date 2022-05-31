@@ -14,5 +14,7 @@ namespace Contact.Service.Core.Models
         public DateTime DateOfBirth { get; set; }
         public string Email { get; set; }
         public string HashPassword { get; set; }
+
+        public void SetPassword(string hashPassword) => HashPassword = hashPassword;
     }
 }

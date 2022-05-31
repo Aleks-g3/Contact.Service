@@ -11,7 +11,7 @@ namespace Contact.Service.Core.Services
     {
         Task<int> AddAsync(ContactEntity contact);
         Task UpdateAsync(ContactEntity contact);
-        Task DeleteAsync(int id);
+        Task DeleteAsync(ContactEntity contact);
         Task<ContactEntity> GetByIdAsync(int id);
         Task<IEnumerable<ContactEntity>> GetAllAsync();
     }
