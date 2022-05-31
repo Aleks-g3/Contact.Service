@@ -27,7 +27,7 @@ namespace Contact.Service.API.Controllers
         public async Task<ActionResult> GetAllAsync([FromServices] IContactRepository contactRepository)
         {
             var contacts = await contactRepository.GetAllAsync();
-            return Ok(contacts);
+            return Ok(mapper.Map<IEnumerable<SimpleContactDTO>>(contacts));
         }
 
         [HttpGet("{userId}")]
